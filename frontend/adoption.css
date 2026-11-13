@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/*YLEISET MÄÄRITYKSET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F3EE;
+    color: #303B34;
+}
+
+/*HEADER OSIO*/
+
+.index-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;          
+    padding: 20px 60px;
+    background-color: #D5DED2;
+}
+
+.header-logo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.header-logo-image {
+    width: 80px;
+    height: auto;
+}
+
+.header-logo-text {
+    font-size: 25px;
+    color: black;
+}
+
+/*TEKSTI OSIO*/
+
+.adoption-accepted-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto 128px;
+}
+
+.adoption-accepted-text h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.adoption-accepted-text p {
+    font-size: 17px;
+}
+
+.frontpage-button {
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #718675;
+    border-radius: 6px;
+}
+
+.navigation-button {
+    text-decoration: none;
+    color: white;
+}
+
+/*FOOTER OSIO*/
+
+.footer {        
+    padding: 50px 170px;
+    background-color: #D5DED2;  
+}
+
+.footer-card {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+.footer-card-info h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.footer-card-info p {
+    text-align: left; 
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+/*MUUT LAITTEET*/
+/*puhelin*/
+
+@media (max-width: 700px) {
+
+    /*HEADER OSIO*/
+
+    .index-header {
+        padding: 15px 20px;
+    }
+
+    .header-logo {
+        gap: 15px;
+    }
+
+    .header-logo-image {
+        width: 55px;
+    }
+
+    .header-logo-text {
+        font-size: 20px;
+    }
+
+    /*TEKSTI OSIO*/
+
+    .adoption-accepted-container {
+        padding: 0 20px;
+        margin: 50px auto 80px;
+    }
+
+    .adoption-accepted-text h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .adoption-accepted-text p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .frontpage-button {
+        width: 50%; 
+        margin: 35px auto 0;
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+
+    /*FOOTER OSIO*/
+
+    .footer {
+        padding: 40px 30px;
+    }
+
+    .footer-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+}

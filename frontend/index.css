@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/*YLEISET MÄÄRITYKSET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F3EE;
+    color: #303B34;
+}
+
+/*HEADER OSIO*/
+
+.index-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;          
+    padding: 20px 60px;
+    background-color: #D5DED2;
+}
+
+.header-logo {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: flex-start;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.header-logo-image {
+    width: 80px;
+    height: auto;
+}
+
+.header-logo-text {
+    font-size: 25px;
+    color: black;
+}
+
+/*ETUSIVUN ESITTELYOSIO*/
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    margin-left: 0; 
+    gap: 50px;
+}
+
+.intro-image {
+    width: 750px;
+    max-width: 100%;
+    height: auto;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-right: 180px;
+}
+
+.intro-text h1 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.intro-text p {
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/*ELÄINKORTIT OSIO*/
+
+.animal-card-title {
+    font-size: 40px;
+    text-align: center;
+}
+
+.animals-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px; 
+    row-gap: 100px; 
+    justify-content: center;
+    max-width: 1400px;  
+    margin: 70px auto 100px;
+}
+
+.animal-intro-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    gap: 25px;
+}
+
+.animal-intro-card-image {
+    width: 200px;
+    height: auto;
+}
+
+.animal-intro-card-info-container {
+    width: 100px;
+}
+
+.animal-intro-card-info-container h3 {
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.animal-intro-card-info-container p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.animal-intro-card-info-container button {
+    background: #718675;
+    border: none; 
+    padding: 5px; 
+    color: whitesmoke;  
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+    font-family: inherit;
+    border-radius: 5px;
+    font-size: 15px; 
+}
+
+/*FOOTER OSIO*/
+
+.footer {        
+    padding: 50px 170px;
+    background-color: #D5DED2;  
+}
+
+.footer-card {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+.footer-card-info h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.footer-card-info p {
+    text-align: left; 
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+
+/*MUUT LAITTEET*/
+/*puhelin*/
+
+@media (max-width: 700px) {
+
+    /*HEADER OSIO*/
+
+    .index-header {
+        padding: 15px 20px;
+    }
+
+    .header-logo {
+        gap: 15px;
+    }
+
+    .header-logo-image {
+        width: 55px;
+    }
+
+    .header-logo-text {
+        font-size: 20px;
+    }
+
+    /*ETUSIVUN ESITTELYOSIO*/
+
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin-top: 15px;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+
+    .intro-image {
+        width: 100%;
+    }
+
+    .intro-text {
+        margin-right: 0;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .intro-text h1 {
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .intro-text p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /*ELÄINKORTIT OSIO*/
+
+    .animal-card-title {
+        font-size: 30px;
+        padding: 0 15px;
+    }
+
+    .animals-container {
+        width: 100%;
+        margin: 35px 0 60px;
+        padding: 0 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .animal-intro-card {
+        width: 100%;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .animal-intro-card-image {
+        width: 140px;
+        height: auto;
+    }
+
+    .animal-intro-card-info-container {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+
+    .animal-intro-card-info-container h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .animal-intro-card-info-container p {
+        overflow-wrap: anywhere;
+    }
+
+    .animal-intro-card-info-container button {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    /*FOOTER OSIO*/
+
+    .footer {
+        padding: 40px 30px;
+    }
+
+    .footer-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+}
+
+
+
+
+
+
+

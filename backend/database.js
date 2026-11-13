@@ -13,6 +13,7 @@ function initDatabase() {
       species TEXT NOT NULL,
       age INTEGER,
       breed TEXT,
+      gender TEXT,
       description TEXT,
       image_url TEXT,
       status BOOLEAN NOT NULL
@@ -41,25 +42,24 @@ function initDatabase() {
   if (animalCount.count === 0) {
     console.log('Lisätään adoptioeläimiä...');
 
-    // lisää image_url myöhemmin!
     const animals = [
-      ['Testieläin1', 'Kissa', 3, 'Maatiainen', 'Leikkisä', null, 1],
-      ['Testieläin2', 'Koira', 5, 'Kultainennoutaja', 'Leikkisä', null, 1],
-      ['Rekku', 'Koira', 7, 'Labradorinnoutaja', 'Leikkisä', null, 0],
-      ['Nemo', 'Kala', 1, 'Kultakala', 'Utelias', null, 0],
-      ['Puppe', 'Kani', 2, 'Kääpiöluppa', 'Ujo', null, 0],
-      ['Rolle', 'Koira', 4, 'Kääpiöpinseri', 'Vauhdikas', null, 0],
-      ['Rio', 'Lintu', 10, 'Undulaatti', 'Laulavainen', null, 0],
-      ['Mauno', 'Kissa', 9, 'Maatiainen', 'Rauhallinen', null, 0],
-      ['Risto', 'Kani', 1, 'Hollantilainen', 'Utelias', null, 0],
-      ['Nelli', 'Lintu', 8, 'Papukaija', 'Sosiaalinen', null, 0],
-      ['Mirri', 'Kissa', 3, 'Maatiainen', 'Utelias', null, 0]
+      ['Testieläin1', 'Kissa', 3, 'Maatiainen', 'Naaras', 'Leikkisä', null, 1],
+      ['Testieläin2', 'Koira', 5, 'Kultainennoutaja', 'Uros', 'Leikkisä', null, 1],
+      ['Elmo', 'Koira', 4, 'Labradorinnoutaja', 'Uros', 'Rauhallinen ja lojaali. Sopii parhaiten yhden omistajan lemmikiksi.', 'images/labrador.jpg', 0],
+      ['Nemo', 'Kala', 2, 'Kultakala', 'Uros', 'Sosiaalinen ja utelias. Kova uimari.', 'images/goldfish.jpg', 0],
+      ['Rumpali', 'Kani', 1, 'Kääpiöluppa', 'Uros', 'Vauhdikas ja rohkea. Rumpali on älykäs ja energinen kani, joka kaipaa monipuolisia virikkeitä.', 'images/mini-lop.jpg', 0],
+      ['Martta', 'Koira', 3, 'Bordercollie', 'Naaras', 'Lempeä ja leikkisä. Martta on sosiaalinen ja sopii hyvin lapsiperheeseen ja toisten koirien kaveriksi.', 'images/bordercollie.jpg', 0],
+      ['Coco', 'Lintu', 10, 'Siniotsa-amatsoni', 'Naaras', 'Älykäs ja ihmisrakas. Coco on myös nopea oppimaan.', 'images/parrot.jpg', 0],
+      ['Hattara', 'Kissa', 5, 'Kirjava maatiainen', 'Naaras', 'Aktiivinen ja leikkisä. Nauttii muiden ihmisten ja kissojen seurasta.', 'images/calico-cat.jpg', 0],
+      ['Kaneli', 'Kani', 3, 'Hollantilainen', 'Naaras', 'Kesy ja ystävällinen. Tykkää rapsutuksista ja auringossa köllöttelystä.', 'images/dutch-rabbit.jpg', 0],
+      ['Hamtaro', 'Jyrsijä', 1, 'Syyrianhamsteri', 'Naaras', 'Utelias ja vikkelä. Aktiivinen öisin.', 'images/hamster.jpg', 0],
+      ['Tikru', 'Kissa', 7, 'Ragdoll', 'Uros', 'Rauhallinen ja hieman arka. Kaipaa toista kissaa rohkaisuksi.', 'images/ragdoll.jpg', 0]
     ];
 
     const insertAnimal = db.prepare(`
       INSERT INTO animals
-      (name, species, age, breed, description, image_url, status)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
+      (name, species, age, breed, gender, description, image_url, status)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
     const insertAnimals = db.transaction((animals) => {

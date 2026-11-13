@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fi">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vaasan Eläinadoptio</title>
+        <meta name="description" content="Vaasan Eläinsuoja ry:n adoptiopalvelu">
+        <link rel="stylesheet" href="animal.css">
+    </head>
+
+    <body>
+
+        <header class="index-header">
+            <a href="index.html" class="header-logo">
+                <img src="images/logo.png" alt="logo" class="header-logo-image">
+                
+                <div class="header-logo-text">
+                    <p>Vaasan Eläinsuoja ry</p>
+                </div>
+            </a>
+        </header>
+
+        <div class="animal-container" id="animal-container">
+            <!-- app.js luo eläimen tiedot tähän -->
+        </div>
+
+        <h2 class="adoption-form-title">Haluatko adoptoida minut?</h2>
+
+        <div class="adoption-form-container">
+            <form class="adoption-form">
+                <label for="fullname">Koko nimi:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br>
+                <label for="email">Sähköposti:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Puhelinnumero:</label><br>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="messageBox">Viesti:</label><br>
+                <textarea id="messageBox" name="messageBox"></textarea><br>
+                <button type="submit">Adoptoi minut</button>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-card">
+                <div class="footer-card-info">
+                    <h2>Yhteystiedot</h2>
+                    <p>
+                        <strong>Puhelinnumero: </strong> +358 40 123 4567
+                    <br>
+                        <strong>Sähköposti: </strong> asiakaspalvelu@vaasanelainsuoja.fi
+                    <br>
+                        <strong>Osoite: </strong> Tassutie 1, 65100 Vaasa
+                    </p>
+                </div>
+                <div class="footer-card-image">
+                    <img src="images/logo.png" alt="logo" class="footer-logo">
+                </div>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+        <script>
+            fetchOneAnimal();
+            adoptAnimal();
+        </script>
+
+    </body>
+</html>

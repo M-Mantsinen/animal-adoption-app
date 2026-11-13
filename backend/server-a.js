@@ -11,6 +11,14 @@ app.use(express.json());
 
 initDatabase();
 
+//KOKEILU (frontendin näyttäminen, koska live serverillä CORS estää javascriptin toiminnan)
+//laita tää const expressin alle lopullisessa versiossa
+const path = require('path');
+
+// Frontendin tiedostojen tarjoilu
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
+//KOKEILU
+
 
 // GET /animals (Hae kaikki eläimet) 
 

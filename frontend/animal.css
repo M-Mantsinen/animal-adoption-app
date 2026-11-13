@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/*YLEISET MÄÄRITYKSET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F3EE;
+    color: #303B34;
+}
+
+/*HEADER OSIO*/
+
+.index-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;          
+    padding: 20px 60px;
+    background-color: #D5DED2;
+}
+
+.header-logo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.header-logo-image {
+    width: 80px;
+    height: auto;
+}
+
+.header-logo-text {
+    font-size: 25px;
+    color: black;
+}
+
+/*ELÄINKORTTI OSIO*/
+
+.animal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #E8E4DB;
+}
+
+.animal-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.animal-card-image {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+.animal-card-info-container{
+    width: 500px;
+}
+
+.animal-card-info-container h1 {
+    text-align: left;
+    margin-bottom: 50px;
+    font-size: 55px;
+}
+
+.animal-card-info-container p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.animal-status {
+    margin-top: 30px;
+}
+
+/*ADOPTIOLOMAKE OSIO*/
+
+.adoption-form-title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    font-size: 30px;
+}
+
+.adoption-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 50px auto;
+    padding: 40px 60px;
+    background-color: #F1EEE7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.adoption-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.adoption-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.adoption-form input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.adoption-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.adoption-form button {
+    height: 45px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 6px;
+    background-color: #718675;
+    color: whitesmoke;
+}
+
+/*FOOTER OSIO*/
+
+.footer {        
+    padding: 50px 170px;
+    background-color: #D5DED2;  
+}
+
+.footer-card {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+.footer-card-info h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.footer-card-info p {
+    text-align: left; 
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+/*MUUT LAITTEET*/
+/*puhelin*/
+
+@media (max-width: 700px) {
+
+    /*HEADER OSIO*/
+
+    .index-header {
+        padding: 15px 20px;
+    }
+
+    .header-logo {
+        gap: 15px;
+    }
+
+    .header-logo-image {
+        width: 55px;
+    }
+
+    .header-logo-text {
+        font-size: 20px;
+    }
+
+    /*ELÄINKORTTI OSIO*/
+
+    .animal-container {
+        padding: 20px 15px 35px;
+    }
+
+    .animal-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .animal-card-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .animal-card-info-container {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .animal-card-info-container h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .animal-status {
+        margin-top: 20px;
+    }
+
+    /*ADOPTIOLOMAKE OSIO*/
+
+    .adoption-form-title {
+        font-size: 24px;
+        margin-top: 35px;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .adoption-form-container {
+        width: calc(100% - 30px);
+        margin: 25px auto 40px;
+        padding: 30px 30px;
+        max-width: none;
+    }
+
+    .adoption-form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .adoption-form label {
+        font-size: 15px;
+    }
+   
+    .adoption-form textarea {
+        height: 130px;
+        font-size: 15px;
+    }
+
+    .adoption-form button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    /*FOOTER OSIO*/
+
+    .footer {
+        padding: 40px 30px;
+    }
+
+    .footer-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+}
