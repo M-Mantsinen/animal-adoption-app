@@ -1,5 +1,8 @@
+const path = require('path');
 const Database = require('better-sqlite3');
-const db = new Database('./adoption.db');
+
+const dbPath = path.join(__dirname, '..', 'database', 'adoption.db');
+const db = new Database(dbPath);
 
 db.pragma('foreign_keys = ON');
 

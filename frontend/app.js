@@ -23,7 +23,7 @@ function fetchAllAnimals() {
                 
                 // Luodaan elementin html osio
                 card.innerHTML = `
-                    <img src="${animal.image_url ?? "images/placeholder.jpg"}" alt="${animal.breed}" class="animal-intro-card-image">
+                    <img src="${animal.image_url ?? "images/placeholder.png"}" alt="${animal.breed}" class="animal-intro-card-image">
                     
                     <div class="animal-intro-card-info-container">
                         <h3>${animal.name}</h3>
@@ -72,12 +72,21 @@ function fetchOneAnimal() {
         })
 
         .then((animal) => {
+            const adoptionFormTitle = document.querySelector(".adoption-form-title");
+            const adoptionFormContainer = document.querySelector(".adoption-form-container");
+
+            // Tarkistetaan eläimen status
+            if (animal.status === 1) {
+                adoptionFormTitle.hidden = true;
+                adoptionFormContainer.hidden = true;
+            }
+
             const card = document.createElement("div");
             card.classList.add("animal-card");
 
             // Luodaan elementin html osio
             card.innerHTML = `
-                <img src="${animal.image_url ?? "images/placeholder.jpg"}" alt="${animal.breed}" class="animal-card-image">
+                <img src="${animal.image_url ?? "images/placeholder.png"}" alt="${animal.breed}" class="animal-card-image">
                 
                 <div class="animal-card-info-container">
                     <h1>${animal.name}</h1>

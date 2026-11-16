@@ -1,0 +1,16 @@
+services:
+  server-a:
+    build: .
+    command: node backend/server-a.js
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./database:/app/database
+    depends_on:
+      - server-b
+
+  server-b:
+    build: .
+    command: node backend/server-b.js
+    volumes:
+      - ./database:/app/database

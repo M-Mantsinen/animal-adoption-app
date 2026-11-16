@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const {
   db,
@@ -11,13 +12,8 @@ app.use(express.json());
 
 initDatabase();
 
-//KOKEILU (frontendin näyttäminen, koska live serverillä CORS estää javascriptin toiminnan)
-//laita tää const expressin alle lopullisessa versiossa
-const path = require('path');
-
-// Frontendin tiedostojen tarjoilu
+// frontend
 app.use(express.static(path.join(__dirname, '..', 'frontend')));
-//KOKEILU
 
 
 // GET /animals (Hae kaikki eläimet) 
@@ -76,7 +72,7 @@ app.post('/animals/:id/adopt', async (req, res) => {
         } 
 
         // lähetetään adoptiohakemus server B:lle
-        const response = await fetch('http://localhost:4000/adoptions', { 
+        const response = await fetch('http://server-b:4000/adoptions', { 
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'

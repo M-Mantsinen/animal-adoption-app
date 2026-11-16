@@ -1,15 +1,9 @@
 const express = require('express');
-
-const {
-  db,
-  initDatabase
-} = require('./database');
+const { db } = require('./database');
 
 const app = express();
 
 app.use(express.json());
-
-initDatabase();
 
 
 // POST /adoptions (lisää adoptio tietokantaan ja muuta eläimen adoptiostatus)
